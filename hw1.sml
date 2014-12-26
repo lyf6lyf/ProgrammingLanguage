@@ -49,7 +49,7 @@ fun oldest(days: (int*int*int) list) =
 	if null days then NONE
 	else 
 		let
-			val tl_ans = odest(tl days)
+			val tl_ans = oldest(tl days)
 		in
 			if isSome tl_ans andalso is_older(valOf tl_ans, hd days)
 			then tl_ans			
